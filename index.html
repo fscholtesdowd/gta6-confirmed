@@ -17,6 +17,39 @@
 <p class="lead">One page per question. Every answer says who confirmed it and when
 &mdash; or says plainly that nobody has. Leaked footage never counts as confirmation
 here, no matter how real it looks.</p>
+<section class="countdown-wrap">
+<h2>Countdown to GTA 6</h2>
+<div class="countdown" id="gta-countdown" data-target="2026-11-19T00:00:00Z">
+<div class="cbox"><span class="cnum" data-u="d">76</span><span class="clabel">days</span></div>
+<div class="cbox"><span class="cnum" data-u="h">00</span><span class="clabel">hours</span></div>
+<div class="cbox"><span class="cnum" data-u="m">00</span><span class="clabel">min</span></div>
+<div class="cbox"><span class="cnum" data-u="s">00</span><span class="clabel">sec</span></div>
+</div>
+<p class="fine">Counting down to November 19, 2026
+(<a href="release-date/index.html">source and details</a>).
+<span id="gta-countdown-status">Static as of 2026-09-04 - enable JavaScript for a live countdown.</span></p>
+</section>
+<script>(function(){
+var el=document.getElementById('gta-countdown');
+if(!el)return;
+var target=new Date(el.getAttribute('data-target')).getTime();
+var d=el.querySelector('[data-u="d"]'),h=el.querySelector('[data-u="h"]'),
+    m=el.querySelector('[data-u="m"]'),s=el.querySelector('[data-u="s"]');
+var status=document.getElementById('gta-countdown-status');
+function pad(n){return String(n).padStart(2,'0');}
+function tick(){
+var diff=target-Date.now();
+if(diff<=0){d.textContent='0';h.textContent='00';m.textContent='00';s.textContent='00';
+status.textContent='GTA 6 is out.';clearInterval(timer);return;}
+var sec=Math.floor(diff/1000);
+var dd=Math.floor(sec/86400);sec-=dd*86400;
+var hh=Math.floor(sec/3600);sec-=hh*3600;
+var mm=Math.floor(sec/60);sec-=mm*60;
+d.textContent=dd;h.textContent=pad(hh);m.textContent=pad(mm);s.textContent=pad(sec);
+}
+status.textContent='Live and ticking.';
+tick();var timer=setInterval(tick,1000);
+})();</script>
 <p class="counts"><strong>24</strong> confirmed &middot;
 <strong>7</strong> rumors &middot;
 <strong>17</strong> with no official answer &middot;
@@ -45,7 +78,7 @@ answer at all. We say so instead of guessing.</li>
 <p class="fine">Fan-made fact tracker. Not affiliated with Rockstar Games or Take-Two
 Interactive. Grand Theft Auto is their trademark. No game imagery is used here &mdash;
 just facts, sources and dates.</p>
-<p class="fine">Built 2026-08-24. Free to use.</p>
+<p class="fine">Built 2026-09-04. Free to use.</p>
 </footer>
 </body>
 </html>

@@ -38,4 +38,9 @@ p.fine,.fine{color:var(--gray);font-size:.85rem}
 .method{background:var(--tint);border-radius:10px;padding:.9rem 1rem;font-size:.92rem}
 .method ul{margin:.4rem 0;padding-left:1.1rem}
 .method li{margin:.35rem 0}
+.countdown-wrap{margin-top:1rem}
+.countdown{display:flex;gap:.6rem;flex-wrap:wrap;margin:.5rem 0}
+.cbox{background:var(--tint);border-radius:10px;padding:.7rem 1.1rem;text-align:center;min-width:4.4rem}
+.cnum{display:block;font-size:1.7rem;font-weight:800;font-variant-numeric:tabular-nums;color:var(--yes)}
+.clabel{display:block;font-size:.72rem;color:var(--gray);text-transform:uppercase;letter-spacing:.04em}
 @media(min-width:40rem){h1{font-size:1.8rem}}
